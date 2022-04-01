@@ -6,7 +6,7 @@ function createStream() {
   var stream = combine(
     es.split('\n'),
     es.map(function(url, callback) {
-      if(!url) return callback(null, '');
+      if(!url) return callback(null, 'https://derrick.xonosho.st/radio/8010/radio.mp3');
       var req = request(url, function(err, res, body) {
         if(err) stream.emit('error', err);
         callback(null, body);
